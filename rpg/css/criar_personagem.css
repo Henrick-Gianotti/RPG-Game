@@ -1,0 +1,180 @@
+#form-criar-personagem{
+    margin: auto;
+}
+
+/* esconde o menu_aside */
+.barra-lateral{
+    display: none;
+}
+
+.carrossel-container{
+    position: relative;
+    max-width: 990px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carrossel-viewport{
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrossel-track{
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.class-card{
+    flex: 0 0 300px;
+    background-color: var(--cor-fundo-aside);
+    border-radius: var(--raio-borda-grande);
+    border: 2px solid var(--cor-borda-sutil);
+    padding: 30px;
+    margin: 0 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.class-card h2{
+    color: var(--cor-destaque);
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    border-bottom: 2px solid var(--cor-borda-sutil);
+    padding-bottom: 15px;
+}
+
+/* ao colocar o mouse em cima, ele da um pequeno zoom no card
+
+.class-card:hover{
+    transform: scale(1.03); /*Efeito de zoom sutil 
+    border-color: var(--cor-destaque);
+}
+*/
+
+.attributes-list{
+    list-style: none;
+    padding: 0;
+    font-size: 1.2em;
+}
+
+.attributes-list li{
+    margin-bottom: 12px;
+}
+
+.atributo-pos{
+    color: #27ae60;
+}
+
+.atributo-neg{
+    color: #c0392b;
+}
+
+.carrossel-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(44, 62, 80, 0.7);
+    border: 1px solid var(--cor-borda-sutil);
+    color: var(--cor-texto-principal);
+    font-size: 24px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    z-index: 10;
+    transition: background-color 0.3s;
+}
+
+.carrossel-btn:hover{
+    background-color: var(--cor-destaque);
+}
+
+.carrossel-btn.prev{
+    left: -60px;
+}
+
+.carrossel-btn.next{
+    right: -60px;
+}
+
+.btn-escolher{
+    background-color: #27ae60;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--raio-borda-padrao);
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.class-card:hover .btn-escolher{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.btn-escolher.selecionado{
+    background-color: #5A6D64;
+    cursor: default;
+}
+
+.class-card.selecionado{
+    border-color: #27ae60;
+}
+
+
+.finalizar-criacao{
+    max-width: 420px;
+    margin: 40px auto 0 auto;
+    text-align: center;
+}
+
+.finalizar-criacao label{
+    display: block;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.finalizar-criacao input{
+    width: 100%;
+    padding: 13px;
+    background-color: var(--cor-fundo-aside);
+    border: 1px solid var(--cor-borda-sutil);
+    border-radius: var(--raio-borda-padrao);
+    color: var(--cor-texto-principal);
+    font-size: 1em;
+    text-align: center;
+}
+
+.finalizar-criacao input:focus{
+    outline: none;
+    border-color: var(--cor-destaque);
+}
+
+.btn-criar-person{
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: #27ae60;
+    border: none;
+    border-radius: var(--raio-borda-padrao);
+    color: #ffffff;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-criar-person:hover{
+    background-color: #2ecc71;
+}

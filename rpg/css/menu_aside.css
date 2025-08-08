@@ -1,0 +1,51 @@
+.barra-lateral {
+    flex: 0 0 var(--largura-aside);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--cor-fundo-aside);
+    padding: 20px;
+}
+
+.barra-lateral h2 {
+    color: var(--cor-destaque);
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--cor-fundo-principal);
+}
+
+.barra-lateral nav {
+    flex-grow: 1;
+}
+
+.barra-lateral nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.barra-lateral nav li {
+    margin-bottom: 15px;
+}
+
+.barra-lateral nav a {
+    color: var(--cor-texto-principal);
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    border-radius: var(--raio-borda-padrao);
+    transition: var(--transicao-padrao);
+}
+
+.barra-lateral nav a:hover{
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo-aside);
+}
+
+.logout-button{
+    position: bottom;
+}
+
+
+

@@ -1,0 +1,231 @@
+.conteudo-principal{
+    margin: auto;
+}
+
+.selecao-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.slot{
+    width: 280px;
+    border-radius: var(--raio-borda-grande);
+    background-color: var(--cor-fundo-aside);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    color: var(--cor-texto-principal);
+}
+
+.slot-personagem:hover {
+    transform: translateY(-10px);
+    border-color: var(--cor-destaque);
+    box-shadow: 0 10px 25px rgba(41, 128, 185, 0.4);
+}
+
+.slot-personagem-existente {
+    padding: 20px;
+    text-align: center;
+}
+
+.personagem-retrato {
+    height: 207px;
+    background-color: var(--cor-fundo-principal);
+    border-radius: var(--raio-borda-padrao);
+    margin-bottom: 20px;
+    border: 1px solid var(--cor-borda-sutil);
+}
+
+.personagem-info h2 {
+    color: var(--cor-destaque);
+    margin: 0 0 5px 0;
+    font-size: 1.8em;
+}
+
+.personagem-info p {
+    margin: 0;
+    color: #bdc3c7;
+    font-size: 1.1em;
+}
+
+.btn-deletar
+{
+    background-color: #c0392b;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    padding: 12px 25px;
+    border-radius: var(--raio-borda-padrao, 5px);
+    transition: 0.2s;
+}
+.btn-deletar:hover
+{
+    background-color: #e74c3c;
+}
+
+.btn-selecionar {
+    display: inline-block;
+    margin-top: 25px;
+    background-color: var(--cor-destaque);
+    color: #ffffff;
+    padding: 12px 30px;
+    border-radius: var(--raio-borda-padrao);
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-selecionar:hover {
+    background-color: var(--cor-destaque-hover);
+}
+
+.slot-personagem-vazio {
+    min-height: 445px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-style: dashed;
+    border-color: var(--cor-borda-sutil);
+    cursor: pointer;
+}
+
+.slot-personagem-vazio:hover {
+    background-color: #25374a;
+}
+
+.icone-criar {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+/* sinal de + */
+.icone-criar::before, .icone-criar::after {
+    content: '';
+    position: absolute;
+    background-color: var(--cor-borda-sutil);
+    border-radius: 3px;
+    transition: background-color 0.3s;
+}
+.slot-personagem-vazio:hover .icone-criar::before,
+.slot-personagem-vazio:hover .icone-criar::after {
+    background-color: var(--cor-destaque);
+}
+
+/* barra horizontal do + */
+.icone-criar::before {
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 10px;
+}
+
+/* barra vertical do + */
+.icone-criar::after {
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 100%;
+}
+
+.slot-personagem-vazio span {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+
+/* estilo da model para deletar personagem */
+.modal-overlay
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.modal-overlay.hidden
+{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-content
+{
+    background-color: var(--cor-fundo-aside, #2c3e50);
+    padding: 30px 40px;
+    border-radius: var(--raio-borda-grande, 10px);
+    border: 1px solid var(--cor-borda-sutil, #34495e);
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+    width: 90%;
+    max-width: 450px;
+}
+
+.modal-content h2
+{
+    color: var(--cor-destaque, #e67e22);
+    margin-top: 0;
+}
+
+.modal-content p
+{
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.modal-actions
+{
+    display: flex;
+    justify-content: space-around;
+    gap: 15px;
+}
+
+.modal-actions button
+{
+    border: none;
+    padding: 12px 25px;
+    border-radius: var(--raio-borda-padrao, 5px);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-cancelar
+{
+    background-color: #7f8c8d;
+    color: white;
+}
+.btn-cancelar:hover
+{
+    background-color: #95a5a6;
+}
+
+.btn-confirmar-exclusao
+{
+    background-color: #c0392b;
+    color: white;
+}
+.btn-confirmar-exclusao:hover
+{
+    background-color: #e74c3c;
+}

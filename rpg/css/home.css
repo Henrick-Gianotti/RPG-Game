@@ -1,0 +1,35 @@
+.conteudo-principal {
+    flex-grow: 1;
+    background-color: #2c3e50;
+    padding: 40px;
+}
+
+h1 {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #7f8c8d;
+    padding-bottom: 10px;
+}
+
+.quadro-jogador {
+    width: 100%;
+    max-width: 500px;
+    border-collapse: collapse;
+    background-color: #34495e;
+}
+
+.quadro-jogador th, .quadro-jogador td {
+    border: 1px solid #1a2b3c;
+    padding: 12px;
+    text-align: left;
+}
+
+.quadro-jogador thead th {
+    background-color: #1a2b3c;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.quadro-jogador td:first-child {
+    font-weight: bold;
+    width: 30%;
+}

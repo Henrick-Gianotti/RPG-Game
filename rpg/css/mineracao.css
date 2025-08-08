@@ -1,0 +1,26 @@
+.container-acao p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin-bottom: 30px;
+}
+
+.botoes-acao {
+    display: flex;
+    gap: 15px;
+}
+
+.botoes-acao a {
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #4a627a;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.botoes-acao a:hover {
+    background-color: #4a627a;
+    border-color: #ecf0f1;
+}

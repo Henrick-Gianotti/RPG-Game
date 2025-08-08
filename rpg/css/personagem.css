@@ -1,0 +1,28 @@
+.conteudo-principal{
+    margin: auto;
+}
+
+.tabela-info {
+    width: 100%;
+    max-width: 600px;
+    border-collapse: collapse;
+    background-color: #34495e;
+}
+
+.tabela-info th,
+.tabela-info td {
+    border: 1px solid #1a2b3c;
+    padding: 12px;
+    text-align: left;
+}
+
+.tabela-info thead th {
+    background-color: #1a2b3c;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+.tabela-info tbody td:first-child {
+    font-weight: bold;
+    width: 30%;
+}
